@@ -88,8 +88,8 @@
           <p><strong>Autor:</strong> Hernán Moreno&nbsp;</p>
 		  <p><b>Última modificación:</b> 28 diciembre 2020&nbsp;&nbsp;</p>
 		  <p>&nbsp;</p>
-<p> <strong>Inversión de Control o IoC</strong></p>
-	      <p> 
+      <p> <strong>Inversión de Control o IoC</strong></p>
+	    <p> 
 		  Inversión de Control (de ahora en adelante, IoC por sus síglas en inglés) es un <strong><em>principio</em></strong> a través del cual la gestión/control de los objetos y partes de la aplicación son transferidos al contenedor o framework. El IoC toma el control de nuestro código haciendo las llamadas necesarias, actuando como un orquestador de nuestro código en muchos aspectos. Los contenedores IoC por lo general tienen abstracciones y lógicas internas que pueden ser extendidas tal y como es el caso del Spring IoC. </p>
 			<br/>
         <p> <strong>Ventajas del IoC</strong></p>
@@ -102,11 +102,52 @@
             <i class="icofont-rounded-right"></i> Mayor facilidad para al realizar pruebas del código (unit tests). A través de simulación de sus dependencias (mocks) permitiendo a las partes del programa comunicarse mediante sus contratos/interfaces.			
 			<br/>			
           <br/>
-		  <p>El IoC puede ser implementado mediante la realización de cualquiera de los siguientes<em> <strong><a href="https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o">patrones</a></strong></em>: <a href="https://es.wikipedia.org/wiki/Strategy_(patr%C3%B3n_de_dise%C3%B1o)#:~:text=El%20patr%C3%B3n%20Estrategia%20(Strategy)%20es,objetos%20para%20resolver%20una%20tarea.">Diseño de Estrategia</a>, <a href="https://es.wikipedia.org/wiki/Factory_Method_(patr%C3%B3n_de_dise%C3%B1o)#:~:text=Es%20una%20simplificaci%C3%B3n%20del%20Abstract,tendremos%20uno%20u%20otro%20comportamiento.">Fábrica</a>, <a href="https://en.wikipedia.org/wiki/Service_locator_pattern">Localizador de Servicios</a>, e<a href="https://es.wikipedia.org/wiki/Inyecci%C3%B3n_de_dependencias"> </a><strong><em><a href="https://es.wikipedia.org/wiki/Inyecci%C3%B3n_de_dependencias">Inyección de Dependencias</a>.</em></strong></p>
+		  <p>El IoC puede ser implementado mediante la realización de cualquiera de los siguientes<em> <strong><a href="https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o">patrones</a></strong></em>: <a href="https://es.wikipedia.org/wiki/Strategy_(patr%C3%B3n_de_dise%C3%B1o)#:~:text=El%20patr%C3%B3n%20Estrategia%20(Strategy)%20es,objetos%20para%20resolver%20una%20tarea.">Diseño de Estrategia</a>, <a href="https://es.wikipedia.org/wiki/Factory_Method_(patr%C3%B3n_de_dise%C3%B1o)#:~:text=Es%20una%20simplificaci%C3%B3n%20del%20Abstract,tendremos%20uno%20u%20otro%20comportamiento.">Fábrica</a>, <a href="https://en.wikipedia.org/wiki/Service_locator_pattern">Localizador de Servicios</a>, e <a href="https://es.wikipedia.org/wiki/Inyecci%C3%B3n_de_dependencias"> </a><strong><em><a href="https://es.wikipedia.org/wiki/Inyecci%C3%B3n_de_dependencias">Inyección de Dependencias</a>.</em></strong></p>
 		  <p>&nbsp;</p>
           <p> <strong>Inyección de Dependencias</strong></p>
           <p>
-         &nbsp; </p>
+            Como ya habiamos comentado la inyección de dependencias (de ahora en adelante DI), es la implementación de la inversión de control o IoC. La interconexión de objetos con otros objetos, o "inyección" de objetos en otros objetos, es realizado por un ensamblador en lugar de los objetos mismos.
+          </p>
+          <p>
+            A continuación te mostramos como es la gestión de dependencias primero al estilo tradicional es decir sin el contenedor IoC : 
+          </p>
+          <script src="https://gist.github.com/sistecma/387aad8e2de1672d3cc563c2accc8850.js"></script>
+          <script src="https://gist.github.com/sistecma/7ce9d08c93f8e56ae402d823934394e6.js"></script>
+          <script src="https://gist.github.com/sistecma/8d53e786a6648849f315cdfce9ceed56.js"></script>
+          <p>
+            Ahora observemos como sería la misma pieza de código considerando DI:
+          </p>
+
+          <script src="https://gist.github.com/sistecma/3f5ce957aafa63e2a272b0487b75bdcc.js"></script>
+          <p>
+            Hasta allí todo bien, pero dónde se enlaza la implementación con el contrato/interface? (wiring en inglés). Sigue leyendo a continuación lo explico.
+          </p>
+          <br/>
+          <p> <strong>El contenedor IoC de Spring</strong></p>
+          <p>
+            El contenedor IoC está representado por las interfaces BeanFactory y ApplicationContext. El contenedor de Spring es el responsable de crear instancias, configurar y ensamblar objetos conocidos como beans, así como de administrar su ciclo de vida. 
+           </p>
+            <br/>
+            <i class="icofont-rounded-right"></i> 
+              <strong>BeanFactory</strong> es la interfaz raíz para acceder al contenedor Spring. Proporciona funcionalidades básicas para administrar beans.                 
+            <br/>     
+            <i class="icofont-rounded-right"></i> 
+              <strong>ApplicationContext</strong> es una subinterfaz de BeanFactory. Por tanto, ofrece <strong><em>todas</em></strong> las funcionalidades de BeanFactory. 
+             <br/> 
+             <br/> 
+             <p>
+              Además (ApplicationContext), proporciona funcionalidades más específicas de tipo empresarial. Las características importantes de ApplicationContext son la resolución de mensajes, el apoyo a la internacionalización, la publicación de eventos y los contextos específicos de la capa de aplicación. Por esta razón lo usamos como el contenedor Spring predeterminado. 
+             </p>
+             <br/> 
+              Por ejemplo:                 
+            
+            <br/>  
+            <script src="https://gist.github.com/sistecma/ef8b7a3d4fac00e3f34966c1e405aa97.js"></script>
+            <br/>
+            <p>
+             El contenedor IoC de Spring lee la metadata de los archivos xml de configuración y ensambla los beans durante runtime (ejecución). La DI en Spring puede ser hecha vía constructores, setters(métodos setters) o por sus campos/atributos.
+            </p>
+
           <div class="col-lg-12" data-aos="fade-right"> </div>          
           <br/>
          <h3>&nbsp;</h3>
