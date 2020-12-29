@@ -94,7 +94,7 @@
             <h2></h2>
             <p> <strong>Inversión de Control o IoC</strong></p>
             <p> Inversión de Control (de ahora en adelante, IoC por sus síglas
-              en inglés) es un <strong><em>principio</em></strong> a través del
+              en inglés) es un <strong><em><a href="https://es.wikipedia.org/wiki/Categor%C3%ADa:Principios_de_programaci%C3%B3n">principio</a></em></strong> a través del
               cual la gestión/control de los objetos y partes de la aplicación
               son transferidos al contenedor o framework. El IoC toma el control
               de nuestro código haciendo las llamadas necesarias, actuando como
@@ -104,11 +104,11 @@
               Spring IoC. </p>
             <br/>
             <p> <strong>Ventajas del IoC</strong></p>
-            <i class="icofont-rounded-right"></i> Desacoplamiento. Entre
-            contrato o interface y su implementación. <br/>
+            <i class="icofont-rounded-right"></i> <a href="https://es.wikipedia.org/wiki/Acoplamiento_(inform%C3%A1tica)">Desacoplamiento</a>. Entre
+            <a href="https://es.wikipedia.org/wiki/Interfaz">contrato o interfaz </a>y su implementación. <br/>
             <i class="icofont-rounded-right"></i> Es más facil cambiar entre
             implementaciones. Por lo general mediante configuración. <br/>
-            <i class="icofont-rounded-right"></i> Modularidad. <br/>
+            <i class="icofont-rounded-right"></i> <a href="https://es.wikipedia.org/wiki/Modularidad_(inform%C3%A1tica)">Modularidad</a>. <br/>
             <i class="icofont-rounded-right"></i> Mayor facilidad para al
             realizar pruebas del código (unit tests). A través de simulación de
             sus dependencias (mocks) permitiendo a las partes del programa
@@ -139,7 +139,7 @@
               considerando DI: </p>
             <script src="https://gist.github.com/sistecma/3f5ce957aafa63e2a272b0487b75bdcc.js"></script>
             <p> Hasta allí todo bien, pero dónde se enlaza la implementación con
-              el contrato/interface? (wiring en inglés). Sigue leyendo a
+              el contrato/interfaz? (wiring en inglés). Sigue leyendo a
               continuación lo explico. </p>
             <br/>
             <p> <strong>El contenedor IoC de Spring</strong></p>
@@ -163,17 +163,20 @@
             <script src="https://gist.github.com/sistecma/ef8b7a3d4fac00e3f34966c1e405aa97.js"></script>
             <br/>
             <p> El contenedor IoC de Spring lee la metadata de los archivos xml
-              de configuración y ensambla los beans durante runtime (ejecución).
-              La DI en Spring puede ser hecha vía constructores, setters(métodos
-              setters) o por sus campos/atributos. En un próximo artículo trataremos sobre estos tipos de DI con ejemplos.</p>
-
-
-
-
-
-
-
-           </div><!-- End Tittle --> 
+              de configuración y ensambla los beans durante runtime (ejecución).&nbsp;</p>
+            <script src="https://gist.github.com/sistecma/6761125569b19e53166733293b4e4bfd.js"></script>
+			<p>El siguiente diagrama te muestra una vista de alto nivel de cómo funciona Spring. Las clases de su aplicación se combinan con los metadatos de configuración para que, después de que se haya creado e inicializado el ApplicationContext, tengamos la aplicación completamente configurada y lista para ejecución.</p>
+			<img src="assets/img/IoC.PNG" style="width:50%"/>
+            <p>&nbsp;La DI en Spring puede ser hecha vía constructores, setters(métodos
+              setters) o por sus campos/atributos. </p>
+            <br/>
+		    <p> <strong>Conclusiones</strong></p>
+		    <p>En este breve artículo, hemos discutido los aspectos básicos sobre como funciona el contenedor de Spring y su ApplicationContext.&nbsp;</p>
+		    
+			  <p>Para una comprensión completa revisar el código fuente incluido en este repositorio .&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br>
+            </p>
+          </div><!-- End Tittle --> 
         </div><!-- End Resume Container --> 
 
       </section> <!-- End Resume Section -->
