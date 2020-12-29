@@ -165,9 +165,15 @@
             <p> El contenedor IoC de Spring lee la metadata de los archivos xml
               de configuración y ensambla los beans durante runtime (ejecución).&nbsp;</p>
             <script src="https://gist.github.com/sistecma/6761125569b19e53166733293b4e4bfd.js"></script>
+			<p>El siguiente diagrama te muestra una vista de alto nivel de cómo funciona Spring. Las clases de su aplicación se combinan con los metadatos de configuración para que, después de que se haya creado e inicializado el ApplicationContext, tengamos la aplicación completamente configurada y lista para ejecución.</p>
+			<img src="assets/img/IoC.png" style="width:50%"/>
             <p>&nbsp;La DI en Spring puede ser hecha vía constructores, setters(métodos
               setters) o por sus campos/atributos. </p>
-            <p>Actualmente, es más común realizar el wiring (DI) vía anotaciones y Spring Java Config.&nbsp; &nbsp; &nbsp;</p>
+            <br/>
+		    <p> <strong>Conclusiones</strong></p>
+		    <p>En este breve artículo, hemos discutido los aspectos básicos sobre como funciona el contenedor de Spring y su ApplicationContext.&nbsp;</p>
+		    
+			  <p>Para una comprensión completa revisar el código fuente incluido en este repositorio .&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p><br>
             </p>
           </div><!-- End Tittle --> 
