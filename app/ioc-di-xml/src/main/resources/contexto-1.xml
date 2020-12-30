@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- importar las definiciones de otro xml, en este caso contexto-3.xml que esta en el classpath -->    
+    <import resource="classpath:contexto-3.xml"/>
+      
+    <bean id="computadoraRef"  class="com.sistecma.springdesdecero.iocdi.ComputadoraDI" init-method="boot" destroy-method="shutdown">
+      <constructor-arg ref="monitor"></constructor-arg>  
+      <constructor-arg value="192.168.11.10"></constructor-arg>
+      <constructor-arg value="hernan-pc"></constructor-arg>
+    </bean>
+
+    <bean id="servidorRef"  class="com.sistecma.springdesdecero.iocdi.Servidor">
+       <property name="ip" value="192.168.12.17"/>
+       <property name="hostname" value="hernan-server"/>
+    </bean>
+        
+
+     
+</beans>
