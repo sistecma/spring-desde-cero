@@ -2,8 +2,8 @@ package com.sistecma.springdesdecero.iocdi;
 
 // inyeccion por metodos
 public class Red{
-	private ComputadoraDI computadora;
-	private Servidor servidor;
+	private Equipo computadora;
+	private Equipo servidor;
     
 	// invocado por init-method
 	public void configurar() {
@@ -19,19 +19,19 @@ public class Red{
         System.out.println("Red. Recibido de: " + getServidor().ping());
     }
 
-	public ComputadoraDI getComputadora() {
+	public Equipo getComputadora() {
 		return computadora;
 	}
 
-	public void setComputadora(ComputadoraDI computadora) {
+	public void setComputadora(Equipo computadora) {
 		this.computadora = computadora;
 	}
 
-	public Servidor getServidor() {
+	public Equipo getServidor() {
 		return servidor;
 	}
 
-	public void setServidor(Servidor servidor) {
+	public void setServidor(Equipo servidor) {
 		this.servidor = servidor;
 	}
 }
