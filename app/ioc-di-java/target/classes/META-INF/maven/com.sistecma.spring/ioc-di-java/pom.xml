@@ -3,14 +3,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sistecma.spring</groupId>
-	<artifactId>ioc-di-xml</artifactId>
+	<artifactId>ioc-di-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
 		<spring.version>5.2.0.RELEASE</spring.version> 
 	</properties>
 	<dependencies>
-
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.3.2</version>
+		</dependency>
 		<!-- Spring Context Support -->
 		<dependency>
 			<groupId>org.springframework</groupId>
