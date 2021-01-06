@@ -44,6 +44,7 @@ public class JavaConfig {
 		Red red= (Red) contexto.getBean("red");
 		red.establecerPing();
         
+		// cierra el contexto e invoca @PreDestroy
 		contexto.close();
 	}
 
