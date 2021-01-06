@@ -1,4 +1,4 @@
-# Spring IoC y DI con configuración Xml
+# Spring IoC y DI con configuración Java
 
 
 ## Ambiente de Desarrollo
