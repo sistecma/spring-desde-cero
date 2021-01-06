@@ -1,6 +1,8 @@
 # Spring IoC y DI con configuración Java
 
 
+Muestra las capacidades de Spring Framework con IoC en configuración Java
+
 ## Ambiente de Desarrollo
 
 * Spring 5
