@@ -3,16 +3,17 @@ package com.sistecma.springdesdecero.iocdi;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-// inyeccion por m�todos
 public class Red{
 	private Equipo computadora;
 	private Equipo servidor;
-    
+
+    // Realiza la ejecución del método configurar. Justo después de crear el bean
 	@PostConstruct
 	public void configurar() {
 		System.out.println("red configurada...");
 	}
-	
+
+    // Realiza la ejecución del método eliminar. Justo antes de eliminar el bean	
 	@PreDestroy
 	public void eliminar() {
 		System.out.println("red eliminada...");

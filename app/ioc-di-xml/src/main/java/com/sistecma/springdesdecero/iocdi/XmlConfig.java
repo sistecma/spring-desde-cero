@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class XmlConfig {
 	public static void main(String[] args) {
 		
-		// Usar AbstractApplicationContext cuando uses init-method y destroy-method en el xml de configuracion
+		// Puedes usar AbstractApplicationContext cuando uses init-method y destroy-method en el xml de configuracion
 		// puedes usar uno o varios archivos de configuracion en xml (cuando uses ClassPathXmlApplicationContext) 
 		// igual todo es mapeado a un contexto global (incluso un xml puede importar las definiciones de otro xml ver dentro de contexto-1.xml)
 		// por ejemplo:
