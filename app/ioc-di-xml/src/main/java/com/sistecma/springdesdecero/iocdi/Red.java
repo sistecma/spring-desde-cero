@@ -1,6 +1,6 @@
 package com.sistecma.springdesdecero.iocdi;
 
-// inyeccion por metodos
+// inyeccion por métodos
 public class Red{
 	private Equipo computadora;
 	private Equipo servidor;
