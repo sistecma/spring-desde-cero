@@ -8,18 +8,19 @@ public class ComputadoraDI implements Equipo{
     private String ip;
     private String hostname;
     
-    // inyeccion por constructor
     public ComputadoraDI(Monitor monitor,String ip,String hostname) {
         this.monitor = monitor;
         this.ip= ip;
         this.hostname= hostname;
     }
     
+    // Realiza la ejecución del método boot. Justo después de crear el bean
     @PostConstruct
     public void boot() {
     	System.out.println("equipo " + hostname + " esta " + monitor.mostrar("booteando..."));
     }
     
+    // Realiza la ejecución del método shutdown. Justo antes de eliminar el bean
     @PreDestroy
     public void shutdown() {
     	System.out.println("apagando equipo " + hostname);

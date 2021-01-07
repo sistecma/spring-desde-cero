@@ -1,6 +1,5 @@
 package com.sistecma.springdesdecero.iocdi;
 
-// inyeccion por metodo
 public class Servidor implements Equipo{
 
 	private String ip;

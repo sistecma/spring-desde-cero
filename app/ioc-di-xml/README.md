@@ -1,5 +1,6 @@
 # Spring IoC y DI con configuración Xml
 
+Muestra las capacidades de Spring Framework con IoC y Xml
 
 ## Ambiente de Desarrollo
 
