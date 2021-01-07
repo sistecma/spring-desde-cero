@@ -26,6 +26,4 @@ public class PersistenciaConfig {
         return new JdbcTemplate(dataSource);
     }
     
-    
-    
 }

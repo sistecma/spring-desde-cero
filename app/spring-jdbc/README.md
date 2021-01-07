@@ -1,4 +1,4 @@
-# Spring con JDBC (Borrador, codigo en desarrollo no listo para descarga)  
+# Spring con JDBC  
 
 
 ## Ambiente de Desarrollo
