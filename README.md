@@ -10,10 +10,10 @@
 
   https://sistecma.github.io/2021/01/08/alcance-de-beans.html
 
+  https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html  
+
 ## Proyectos (carpeta app):  
-  io-di-xml: Demuestra las capacidades de Spring Framework para configuración de beans con xml. Esto es especialmente útil cuando tienes librerías en java (jars) y que no tienes el código fuente para agregar y configurar vía anotaciones del contenedor de Spring. 
-  
-  io-di-java: Tutorial en progreso. (Para los impacientes... Código ya está disponible en este repositorio)
+  io-di-xml: Demuestra las capacidades de Spring Framework para configuración de beans con xml. Esto es especialmente útil cuando tienes librerías en java (jars) y que no tienes el código fuente para agregar y configurar vía anotaciones del contenedor de Spring.  
   
   spring-jdbc: Muestra un ejemplo básico sobre como usar Spring Framework con el JdbcTemplate
 
