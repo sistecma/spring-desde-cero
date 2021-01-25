@@ -18,3 +18,5 @@
   spring-jdbc: Muestra un ejemplo básico sobre como usar Spring Framework con el JdbcTemplate
 
   bean-scope-xml: Muestra el uso del alcance de los Spring Beans usando configuración Xml  
+
+  ioc-di-xml-life-cycle: Muestra el uso de customizaciones asociadas al ciclo de vida de los beans.
